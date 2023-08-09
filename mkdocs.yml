@@ -2,7 +2,7 @@ site_name: My Docs
 theme:
   name: material
   locale: en
-  favicon: assets/images/Logo_Square_Thick_White.svg
+  favicon: assets/images/Logo_Square_Thick.svg
   logo: assets/images/Logo_Square_Thick_White.svg
   palette:
     # Palette toggle for light mode
