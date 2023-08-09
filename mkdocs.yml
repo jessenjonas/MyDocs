@@ -20,4 +20,5 @@ theme:
         name: Switch to light mode
 plugins:
   - social:
-      enabled: !ENV [CI, false]
+      cards: !ENV [CI, false]
+      cards_dir: assets/images/social
