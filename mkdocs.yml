@@ -1,4 +1,5 @@
 site_name: My Docs
+site_url: https://docs.designplace.dk
 theme:
   name: material
   locale: en
@@ -18,3 +19,23 @@ theme:
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
+  plugins:
+  - social:
+  - search:
+      lang: en
+  - tags:
+      tags_file: tags.md
+  - encryptcontent:
+
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.path
+    - toc.follow
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
+    - navigation.footer
