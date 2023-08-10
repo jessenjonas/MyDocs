@@ -19,12 +19,14 @@ theme:
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
+
   plugins:
   - social:
   - search:
       lang: en
   - tags:
       tags_file: tags.md
+  - encryptcontent:
 
   features:
     - navigation.instant
