@@ -37,4 +37,17 @@ theme:
     - search.suggest
     - search.highlight
     - search.share
-    - navigation.footer
+
+  markdown_extensions:
+  - abbr
+  - admonition
+  - def_list
+  - footnotes
+  - tables
+  - pymdownx.details
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+
+extra_css:
+  - assets/customization/css/custom.css
