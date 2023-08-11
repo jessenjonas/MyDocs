@@ -20,14 +20,6 @@ theme:
         icon: material/toggle-switch
         name: Switch to light mode
 
-  plugins:
-  - social:
-  - search:
-      lang: en
-  - tags:
-      tags_file: tags.md
-  - encryptcontent:
-
   features:
     - navigation.instant
     - navigation.tracking
@@ -53,3 +45,19 @@ theme:
 
 extra_css:
   - assets/customization/css/custom.css
+
+plugins:
+  - social
+  - search:
+      lang: en
+  - tags:
+      tags_file: tags.md
+  - encryptcontent:
+      remember_password: True
+      password_button: True
+      password_inventory:
+            ATS: 
+                ATS: 'Datait2023!'
+                jonas: 'dgb68vep'
+            _global:
+                jonas: 'dgb68vep'
