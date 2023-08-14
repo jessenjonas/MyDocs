@@ -21,16 +21,16 @@ theme:
         name: Switch to light mode
 
   features:
-    #- navigation.indexes
     - navigation.tracking
     - navigation.tabs
     - navigation.path
     - toc.follow
-    - toc.integrate
+    - navigation.indexes
     - navigation.top
     - search.suggest
     - search.highlight
     - search.share
+    - navigation.sections
 
   markdown_extensions:
   - abbr
@@ -55,9 +55,19 @@ plugins:
   - encryptcontent:
       remember_password: True
       password_button: True
+      encrypted_something:
+            data-md-type: [div, id]
       password_inventory:
             ATS: 
                 ATS: 'Datait2023!'
                 jonas: 'dgb68vep'
             _global:
                 jonas: 'dgb68vep'
+nav:
+  - 'Welcome': 'index.md'
+  - Cooking Books:
+    - Cooking Books/Cooking Books.md 
+    - Cooking Books/Cisco Cooking Book.md
+    - Cooking Books/Microsoft Cooking Book.md
+  - 'Tags': 'tags.md'
+  - 'Designplace': 'https://designplace.dk/'

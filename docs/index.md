@@ -1,7 +1,7 @@
 ---
 obfuscate: SomeNotSoSecretPassword
 ---
-# Welcome to MkDocs
+# Welcome to MyDocs
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
