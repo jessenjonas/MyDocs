@@ -2,6 +2,7 @@
 level: ATS
 obfuscate: SomeNotSoSecretPassword
 tags:
-    - test
+    - Cooking books
+    - Cisco
 ---
-#Password Protected
+#Cisco cooking book
