@@ -54,8 +54,6 @@ plugins:
   - encryptcontent:
       remember_password: True
       password_button: True
-      encrypted_something:
-            data-md-type: [div, id]
       password_inventory:
             ATS: 
                 ATS: 'Datait2023!'
