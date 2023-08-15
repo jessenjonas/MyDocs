@@ -1,5 +1,7 @@
 ---
 obfuscate: SomeNotSoSecretPassword
+hide:
+  - toc
 ---
 # Tags
 
