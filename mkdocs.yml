@@ -30,7 +30,6 @@ theme:
     - search.suggest
     - search.highlight
     - search.share
-    - navigation.sections
 
   markdown_extensions:
   - abbr
@@ -66,7 +65,7 @@ plugins:
 nav:
   - 'Welcome': 'index.md'
   - Cooking Books:
-    - Cooking Books/Cooking Books.md 
+    - Cooking Books/index.md 
     - Cooking Books/Cisco Cooking Book.md
     - Cooking Books/Microsoft Cooking Book.md
   - 'Tags': 'tags.md'
