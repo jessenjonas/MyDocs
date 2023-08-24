@@ -22,6 +22,9 @@ The following are some examples of IPv4 address expressed in dot decimal notatio
 | 10.56.2.2     | 11000111.00111010.00111010.00000001  |
 | 199.58.58.1   | 11000111.00111010.00111010.00000001  |
 
+IPv4 uses the concept of a subnet mask to separate an address into the network portion and the host portion, giving IPv4 its hierarchical structure.
+
+IPv4 uses the concept of a subnet mask to separate an address into the network portion and the host portion, giving IPv4 its hierarchical structure.
 ## Methods to Assign IPv4 Addresses
 
 **Static** - Fixed Address,  
