@@ -4,6 +4,8 @@ obfuscate: SomeNotSoSecretPassword
 tags:
     - Cooking books
     - Cisco
+    - Networking
+    - DHCP
 ---
 # IPv6 Cheat Sheet
 ## Address Length and Format
@@ -29,6 +31,10 @@ However, this can only be done _once_ per address in order to void ambiguity:
 
 According to RFC 5952 `ff:0:0:0:1::1` is not correct either because the longest group of concurrent zeroes must be shortened.  
 If the strings are of equal length, the first string should use the double colon (::) notation:
+
+    ff:0:0:1:1:0:0:1 (correct)
+    ff::1:1:0:0:1 (correct)
+    ff:0:0:1:1::1 (wrong)
 
 ## Protocols
 
@@ -159,4 +165,5 @@ Within IPv6, there are a range of message options. All of these message types ha
 - **Anycast** is a message sent from a host to the fastest / nearest subscriber of a specific address (One to Specific - Fastest Receiver / Nearest Node will receive).
 
 ## Sources
-[IPv6 by Lawrence Whetstone](https://github.com/onemarcfifty/cheat-sheets/blob/main/networking/ipv6.md)
+[IPv6, Lawrence Whetstone](https://github.com/onemarcfifty/cheat-sheets/blob/main/networking/ipv6.md)
+[IPv6 Address Representation and Address Types, Cisco Press](https://www.ciscopress.com/articles/article.asp?p=2803866)
