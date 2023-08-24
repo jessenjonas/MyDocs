@@ -65,7 +65,7 @@ nav:
   - Cooking Books:
     - Cooking Books/index.md 
     - Cisco Cooking Book:
-        - Networking/IPv6.md
+        - IPv6: Networking/IPv6.md
     - Cooking Books/Microsoft Cooking Book.md
   - 'Tags': 'tags.md'
   - 'Designplace': 'https://designplace.dk/'
