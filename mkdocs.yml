@@ -65,6 +65,7 @@ nav:
   - Cooking Books:
     - Cooking Books/index.md 
     - Cisco Cooking Book:
+        - IPv4: Networking/IPv4.md
         - IPv6: Networking/IPv6.md
     - Cooking Books/Microsoft Cooking Book.md
   - 'Tags': 'tags.md'

@@ -6,6 +6,10 @@ tags:
     - Networking
 ---
 # IPv6 Cheat Sheet
+
+Internet Protocol version 6 or IPv6 is the fourth version of the Internet Protocol (IP).  
+IP is one of the core protocols for standards-based internetworking that is used on the Internet and other packet-switched networks.
+
 ## Address Length and Format
 
 The IPv6 address is **128 bits** (i.e. 16 bytes) long and is written in **8 groups of 2 bytes** in hexadecimal numbers, separated by colons:
