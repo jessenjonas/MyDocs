@@ -51,22 +51,14 @@ plugins:
       lang: en
   - tags:
       tags_file: tags.md
-  - encryptcontent:
-      remember_password: True
-      password_button: True
-      password_inventory:
-            ATS: 
-                ATS: 'Datait2023!'
-                jonas: 'dgb68vep'
-            _global:
-                jonas: 'dgb68vep'
+      
 nav:
   - 'Welcome': 'index.md'
   - Cooking Books:
     - Cooking Books/index.md 
     - Cisco Cooking Book:
-        - IPv4: Networking/IPv4.md
-        - IPv6: Networking/IPv6.md
+        - Networking/IPv4.md
+        - Networking/IPv6.md
     - Cooking Books/Microsoft Cooking Book.md
   - 'Tags': 'tags.md'
   - 'Designplace': 'https://designplace.dk/'

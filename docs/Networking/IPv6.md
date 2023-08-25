@@ -1,9 +1,8 @@
 ---
-level: ATS
-obfuscate: SomeNotSoSecretPassword
 tags:
     - Cooking books
     - Networking
+title: IPv6
 ---
 # IPv6 Cheat Sheet
 

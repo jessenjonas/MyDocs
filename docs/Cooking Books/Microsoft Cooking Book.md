@@ -1,5 +1,4 @@
 ---
-obfuscate: SomeNotSoSecretPassword
 tags:
     - Cooking books
     - Microsoft
