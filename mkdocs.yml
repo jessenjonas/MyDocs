@@ -71,7 +71,8 @@ nav:
             - Networking/Cisco/Routing protocols/EIGRP.md
             - Networking/Cisco/Routing protocols/OSPF.md
             - Networking/Cisco/Routing protocols/BGP.md
-    - Networking/IPv4 Cheat Sheet.md
-    - Networking/IPv6 Cheat Sheet.md
+    - Cheat Sheets:
+      - Networking/IPv4 Cheat Sheet.md
+      - Networking/IPv6 Cheat Sheet.md
   - 'Tags': 'tags.md'
   - 'Designplace': 'https://designplace.dk/'
