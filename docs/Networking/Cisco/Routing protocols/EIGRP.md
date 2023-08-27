@@ -104,7 +104,7 @@ The algorithm for dynamically choosing the EIGRP RID uses the following order:
 1. Highest IPv4 address of any up loopback interfaces.
 2. If there are not any up loopback interfaces, the highest IPv4 address of any active up physical interfaces becomes the RID when the EIGRP process initializes.
 
-## RIP Configuration
+## Configuration
 ### EIGRP
     Router eigrp <AS number>
     eigrp router-id <32-bit Router ID>

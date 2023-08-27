@@ -22,8 +22,7 @@ RIPv1, among other limitiations, is limited to classfull routing and are therefo
 |                        |                           | Protocol     | UDP              |
 |                        |                           | Group        | IGP              |
 
-## RIP Configuration
-
+## Configuration
 ### RIPv2
     Router rip
     Version 2
