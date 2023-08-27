@@ -60,7 +60,7 @@ plugins:
 nav:
   - 'Welcome': 'index.md'
   - Cooking books:
-    - Cooking books/index.md 
+    - Cooking Books/index.md 
     - Cisco cooking Book:
         - Cooking books/Cisco cooking book/index.md
         - Networking/Cisco/Basic.md
