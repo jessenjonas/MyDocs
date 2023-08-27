@@ -1,8 +1,7 @@
 ---
 tags:
-    - Cooking books
     - Networking
-title: IPv6
+title: IPv6 Cheat Sheet
 ---
 # IPv6 Cheat Sheet
 

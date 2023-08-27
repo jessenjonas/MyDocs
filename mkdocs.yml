@@ -30,8 +30,10 @@ theme:
     - search.suggest
     - search.highlight
     - search.share
+    - content.code.copy
+    - navigation.instant
 
-  markdown_extensions:
+markdown_extensions:
   - abbr
   - admonition
   - def_list
@@ -41,6 +43,8 @@ theme:
   - pymdownx.caret
   - pymdownx.mark
   - pymdownx.tilde
+  - attr_list
+  - pymdownx.snippets
 
 extra_css:
   - assets/customization/css/custom.css
@@ -51,14 +55,23 @@ plugins:
       lang: en
   - tags:
       tags_file: tags.md
+  - macros
       
 nav:
   - 'Welcome': 'index.md'
-  - Cooking Books:
-    - Cooking Books/index.md 
-    - Cisco Cooking Book:
-        - Networking/IPv4.md
-        - Networking/IPv6.md
-    - Cooking Books/Microsoft Cooking Book.md
+  - Cooking books:
+    - Cooking books/index.md 
+    - Cisco cooking Book:
+        - Cooking books/Cisco cooking book/index.md
+        - Networking/Cisco/Basic.md
+        - Networking/Cisco/IP Addressing.md
+        - Routing Protocols:
+            - Networking/Cisco/Routing protocols/index.md
+            - Networking/Cisco/Routing protocols/RIP.md
+            - Networking/Cisco/Routing protocols/EIGRP.md
+            - Networking/Cisco/Routing protocols/OSPF.md
+            - Networking/Cisco/Routing protocols/BGP.md
+    - Networking/IPv4 Cheat Sheet.md
+    - Networking/IPv6 Cheat Sheet.md
   - 'Tags': 'tags.md'
   - 'Designplace': 'https://designplace.dk/'
