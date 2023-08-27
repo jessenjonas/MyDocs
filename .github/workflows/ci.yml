@@ -23,5 +23,6 @@ jobs:
             mkdocs-material-
       - run: pip install mkdocs-material 
       #- run: pip install mkdocs-encryptcontent-plugin@git+https://github.com/unverbuggt/mkdocs-encryptcontent-plugin@v3.0.0.dev2
+      - run: pip install mkdocs-macros-plugin
       - run: pip install pillow cairosvg
       - run: mkdocs gh-deploy --force
