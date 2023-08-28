@@ -107,6 +107,7 @@ If the conditions above aren't fulfilled, the OSPF process isn't started
 
 ### OSPFv3 Address Family
 *Depending on OS version. May only be on newer versions*
+
     ipv6 unicast-routing
     Router ospfv3 <process number>
     router-id <32-bit Router ID> !Must on IPv6
