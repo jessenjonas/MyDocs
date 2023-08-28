@@ -32,3 +32,10 @@ IPv4 uses the concept of a subnet mask to separate an address into the network p
 ## Subnetting
 
 ## Sources
+
+## To be added
+https://www.networkacademy.io/ccna/ipv6/stateless-address-autoconfiguration-slaac
+https://superuser.com/questions/703915/why-does-my-windows-have-hundreds-of-temporary-ipv6-addresses
+https://www.networkacademy.io/ccna/ipv6/ipv6-on-windows
+https://learningnetwork.cisco.com/s/blogs/a0D6e00000soIs9EAE/the-fundamentals-of-ethernet-cabling-in-an-enterprise-data-network?utm_medium=organic_social&utm_source=facebook&utm_campaign=en_brand&utm_content=ryo&team=social
+https://www.baeldung.com/cs/underlay-overlay-network

@@ -121,8 +121,8 @@ The algorithm for dynamically choosing the EIGRP RID uses the following order:
 ### Named EIGRP IPv4
     Router eigrp <Virtual-Instance name>
     address-family ipv4 autonomous-system <AS number>
-    network <network address> <Wildcard mask>
     eigrp router-id <32-bit Router ID>
+    network <network address> <Wildcard mask>
     af-interface [<interface> | default]
     passive-interface !Supress updates
     or

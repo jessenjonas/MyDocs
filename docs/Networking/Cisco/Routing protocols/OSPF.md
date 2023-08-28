@@ -94,6 +94,7 @@ If the conditions above aren't fulfilled, the OSPF process isn't started
 ## Configuration
 ### OSPFv2
     Router ospf <process number>
+    router-id <32-bit Router ID>
     Network <Network adress> <Wildcard mask> area <area id>
     Passive-interface [<Interface> | Default]
 
@@ -102,8 +103,7 @@ If the conditions above aren't fulfilled, the OSPF process isn't started
     ipv6 router ospf <process number>
     router-id <32-bit Router ID>
     int <interface>
-    ipv6 ospf <process number> area <are>
-
+    ipv6 ospf <process number> area <area>
 
 ### OSPFv3 Address Family
     ipv6 unicast-routing
@@ -117,8 +117,9 @@ If the conditions above aren't fulfilled, the OSPF process isn't started
     area <area id> range <ipv6-prefix> !IPv6
 
 #### Interface configuration
+    int <interface>
     ipv6 enable
-    ospfv3 [ipv4 | ipv6] area <area id>
+    ospfv3 <process number> [ipv4 | ipv6] area <area id>
 
 ## Redistribution
 ### OSPFv2

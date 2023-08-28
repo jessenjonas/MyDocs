@@ -72,6 +72,11 @@ nav:
             - Networking/Cisco/Routing protocols/EIGRP.md
             - Networking/Cisco/Routing protocols/OSPF.md
             - Networking/Cisco/Routing protocols/BGP.md
+        #- VRF
+        #- DMVPN
+        #- ACL & Prefix List
+        #- SNMP
+        #- DHCP
     - Cheat Sheets:
       - Networking/IPv4 Cheat Sheet.md
       - Networking/IPv6 Cheat Sheet.md
