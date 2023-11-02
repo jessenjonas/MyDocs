@@ -77,6 +77,10 @@ nav:
         #- ACL & Prefix List
         #- SNMP
         #- DHCP
+        - Security:
+            - Networking\Cisco\Security\index.md
+            - Networking\Cisco\Security\Basic.md
+            - Networking\Cisco\Security\encryption.md
     - Cheat Sheets:
       - Networking/IPv4 Cheat Sheet.md
       - Networking/IPv6 Cheat Sheet.md
