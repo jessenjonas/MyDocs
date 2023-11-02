@@ -77,6 +77,9 @@ nav:
         #- ACL & Prefix List
         #- SNMP
         #- DHCP
+        #- Syslog
+        #- NTP
+        #- SNMP
         - Security:
             - Networking\Cisco\Security\index.md
             - Networking\Cisco\Security\Basic.md
