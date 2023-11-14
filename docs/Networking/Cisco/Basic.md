@@ -9,7 +9,7 @@ title: Basic
     Enable secret <secret>
     Username <username> secret <secret>
     AAA new-model
-    login block-for 100 attempts 2 within 100
+    login block-for 120 attempts 2 within 120 !Block for 2 minutes, after 2 failed attempts in 2 minute period
 
 ## SSH
     Ip domain-name <DomainName>
