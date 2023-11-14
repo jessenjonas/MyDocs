@@ -141,3 +141,12 @@ router-id <32-bit Router ID> !Must on IPv6
     redistribute <Protocol | ...> <process-id> [subnets]
 
 [^1]: OSPFv3 is using IPv6 Link-Local addresses. Therefore IPv6 must be enabled regardless if using IPv4 or IPv6.
+
+## Additional Configuration
+### Authentication on OSPF
+    key chain <keychain-name>
+    key <number>
+    key-string <secret key>
+    cryptographic-algorithm <algorithm>
+    int <interface>
+    ip authentication key-chain <keychain-name>

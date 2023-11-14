@@ -164,8 +164,8 @@ The algorithm for dynamically choosing the EIGRP RID uses the following order:
 
 ### Authentication on EIGRP 
     key chain <keychain-name>
-    key 2
-    key string <secret key>
+    key <number>
+    key-string <secret key>
     int <interface>
     ip authentication mode eigrp <as-number> md5
     ip authentication key-chain eigrp <as-number> <keychain-name>
@@ -173,7 +173,7 @@ The algorithm for dynamically choosing the EIGRP RID uses the following order:
 ### Authentication on Named EIGRP 
     key chain <keychain-name>
     key <number> !Must be between 0 to 2147483647
-    key string <secret key>
+    key-string <secret key>
     router eigrp EIGRP-NAMED
     address-family ipv4 unicast autonomouse-system <as-number>
     authentication mode <md5 | hmacsha-256>
