@@ -149,4 +149,4 @@ router-id <32-bit Router ID> !Must on IPv6
     key-string <secret key>
     cryptographic-algorithm <algorithm>
     int <interface>
-    ip authentication key-chain <keychain-name>
+    ip ospf authentication key-chain <keychain-name>
