@@ -21,7 +21,8 @@ There are 16 privilege levels in total, as listed below. The higher the privileg
 - **Level 15:** Reserved for the enable mode privileges (enable command). Users can change configurations and view configuration files.
 
 ### Command example
-Router(config)# privilege mode {level level|reset} command
+
+    Router(config)# privilege mode {level level|reset} command
 
 | Command | Description |
 |---|---|
