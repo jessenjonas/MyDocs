@@ -72,11 +72,12 @@ The sequence number is important when configuring multiple crypto map entries.
     set peer <peer IP>
     set pfs <DH group>
 
+*Use the crypto map map-name seq-num command without any keyword to modify the existing crypto map entry or profile.*
+
 | Parameter | Description |
 |---|---|
 | map-name | Identifies the crypto map set.|
-| seq-num  | Sequence number you assign to the crypto map entry.  
-Use the crypto map map-name seq-num command without any keyword to modify the existing crypto map entry or profile. |
+| seq-num  | Sequence number you assign to the crypto map entry. |
 | ipsec-isakmp | Indicates that IKE will be used to establish the IPsec for protecting the traffic specified by this crypto map entry. |
 | ipsec-manual | Indicates that IKE will not be used to establish the IPsec SAs for protecting the traffic specified by this crypto map entry. |
 
