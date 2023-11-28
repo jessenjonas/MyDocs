@@ -29,12 +29,15 @@ Use the mnemonic **HAGLE** to remember the five SAs to configure:
 - **L**ifetime
 - **E**ncryption
 
+Below shows some commands to create an isakmp policy:
+
     crypto isakmp policy <number>
     encryption <encryption>
     hash <hash>
     authentication <authentication method>
     group <Diffie-hellman group>
     lifetime <lifetime> !Seconds
+
 
 ### Configuring ISAKMP Pre-sharedKey
 Pre-shared key may be used for authentication between the peers.  
