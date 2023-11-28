@@ -1,0 +1,1675 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.designplace.dk/Networking/IPv6%20Cheat%20Sheet/">
+      
+      
+        <link rel="prev" href="../IPv4%20Cheat%20Sheet/">
+      
+      
+        <link rel="next" href="../../tags/">
+      
+      
+      <link rel="icon" href="../../assets/images/Logo_Square_Thick.svg">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
+    
+    
+      
+        <title>IPv6 Cheat Sheet - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.fad675c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/customization/css/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="IPv6 Cheat Sheet - My Docs" >
+      
+        <meta  property="og:description"  content="None" >
+      
+        <meta  property="og:image"  content="https://docs.designplace.dk/assets/images/social/Networking/IPv6 Cheat Sheet.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://docs.designplace.dk/Networking/IPv6%20Cheat%20Sheet/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="IPv6 Cheat Sheet - My Docs" >
+      
+        <meta  name="twitter:description"  content="None" >
+      
+        <meta  name="twitter:image"  content="https://docs.designplace.dk/assets/images/social/Networking/IPv6 Cheat Sheet.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ipv6-cheat-sheet" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  <img src="../../assets/images/Logo_Square_Thick_White.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              IPv6 Cheat Sheet
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Welcome
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../Cooking%20books/" class="md-tabs__link">
+          
+  
+    
+  
+  Cooking books
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../tags/" class="md-tabs__link">
+        
+  
+    
+  
+  Tags
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://designplace.dk/" class="md-tabs__link">
+        
+  
+    
+  
+  Designplace
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  <img src="../../assets/images/Logo_Square_Thick_White.svg" alt="logo">
+
+    </a>
+    My Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Cooking%20books/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Cooking books
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Cooking books
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Cooking%20books/Cisco%20cooking%20book/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Cisco cooking book
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Cisco cooking book
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cisco/Basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cisco/IP%20Addressing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IP Addressing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../Cisco/Routing%20protocols/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Routing Protocols
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2_4" id="__nav_2_2_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Routing Protocols
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cisco/Routing%20protocols/RIP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RIP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cisco/Routing%20protocols/EIGRP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EIGRP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cisco/Routing%20protocols/OSPF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OSPF
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cisco/Routing%20protocols/BGP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BGP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../Cisco/Security/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Security
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2_5" id="__nav_2_2_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Security
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cisco/Security/Basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cisco Basic Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cisco/Security/encryption/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Encryption
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_6" id="__nav_2_2_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    VPN
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            VPN
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VPN/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VPN Basics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cisco/VPN/configuring_VPN/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cisco VPN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Cheat Sheets
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Cheat Sheets
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IPv4%20Cheat%20Sheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IPv4 Cheat Sheet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    IPv6 Cheat Sheet
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    IPv6 Cheat Sheet
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#address-length-and-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Address Length and Format
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protocols" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protocols
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods-to-assign-ipv6-addresses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods to Assign IPv6 Addresses
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scopes-and-special-addresses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scopes and Special Addresses
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subnetting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Subnetting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ipv6-addresses-in-urisurls" class="md-nav__link">
+    <span class="md-ellipsis">
+      IPv6 Addresses in URIs/URLs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multicast" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multicast
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#icmp-message-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      ICMP Message Types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dhcpv6" class="md-nav__link">
+    <span class="md-ellipsis">
+      DHCPv6
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dhcpv6-vs-slaac" class="md-nav__link">
+    <span class="md-ellipsis">
+      DHCPv6 vs. SLAAC
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-wireshark" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using WireShark
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using WireShark">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unicast-vs-multicast-vs-broadcast-vs-anycast" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unicast vs. Multicast vs. Broadcast vs. Anycast
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sources
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tags/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://designplace.dk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Designplace
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#address-length-and-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Address Length and Format
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protocols" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protocols
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods-to-assign-ipv6-addresses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods to Assign IPv6 Addresses
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scopes-and-special-addresses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scopes and Special Addresses
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subnetting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Subnetting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ipv6-addresses-in-urisurls" class="md-nav__link">
+    <span class="md-ellipsis">
+      IPv6 Addresses in URIs/URLs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multicast" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multicast
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#icmp-message-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      ICMP Message Types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dhcpv6" class="md-nav__link">
+    <span class="md-ellipsis">
+      DHCPv6
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dhcpv6-vs-slaac" class="md-nav__link">
+    <span class="md-ellipsis">
+      DHCPv6 vs. SLAAC
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-wireshark" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using WireShark
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using WireShark">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unicast-vs-multicast-vs-broadcast-vs-anycast" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unicast vs. Multicast vs. Broadcast vs. Anycast
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sources
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+<nav class="md-tags" >
+  
+    
+    
+    
+      <a href="../../tags/#networking" class="md-tag">Networking</a>
+    
+  
+</nav>
+
+
+
+<h1 id="ipv6-cheat-sheet">IPv6 Cheat Sheet</h1>
+<p>Internet Protocol version 6 or IPv6 is the fourth version of the Internet Protocol (IP).<br />
+IP is one of the core protocols for standards-based internetworking that is used on the Internet and other packet-switched networks.</p>
+<h2 id="address-length-and-format">Address Length and Format</h2>
+<p>The IPv6 address is <strong>128 bits</strong> (i.e. 16 bytes) long and is written in <strong>8 groups of 2 bytes</strong> in hexadecimal numbers, separated by colons:</p>
+<pre><code>fddd:f00d:cafe:0000:0000:0000:0000:0001
+</code></pre>
+<p>Leading zeros of each block can be omitted, the above address can be written like this:</p>
+<pre><code>fddd:f00d:cafe:0:0:0:0:1
+</code></pre>
+<p>We can abbreviate whole blocks of zeros with <code>::</code> and write:</p>
+<pre><code>fddd:f00d:cafe::1
+</code></pre>
+<p>However, this can only be done <em>once</em> per address in order to void ambiguity:</p>
+<pre><code>ff:0:0:0:1:0:0:1 (correct)
+ff::1:0:0:1 (correct)
+ff::1::1 (ambiguous, wrong)
+</code></pre>
+<p>According to RFC 5952 <code>ff:0:0:0:1::1</code> is not correct either because the longest group of concurrent zeroes must be shortened.<br />
+If the strings are of equal length, the first string should use the double colon (::) notation:</p>
+<pre><code>ff:0:0:1:1:0:0:1 (correct)
+ff::1:1:0:0:1 (correct)
+ff:0:0:1:1::1 (wrong)
+</code></pre>
+<h2 id="protocols">Protocols</h2>
+<table>
+<thead>
+<tr>
+<th>Number</th>
+<th>Protocol</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>6</td>
+<td>TCP</td>
+<td>Stateful - Confirms if packets have arrived. Important for use cases with validation.</td>
+</tr>
+<tr>
+<td>17</td>
+<td>UDP</td>
+<td>Stateless - Does not confirm if packets have arrived. Good for streaming applications, VoIP calls, etc.</td>
+</tr>
+<tr>
+<td>58</td>
+<td>IPv6-ICMP</td>
+<td>Information, Error reporting, diagnostics based use cases.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="methods-to-assign-ipv6-addresses">Methods to Assign IPv6 Addresses</h2>
+<p><strong>Static</strong> - Fixed Address,<br />
+<strong>SLAAC</strong> - Stateless Address Auto-Configuration (Address generated by Host),<br />
+<strong>DHCPv6</strong> - Dynamic Host Configuration Protocol (Address assigned by a central DHCP server).</p>
+<h2 id="scopes-and-special-addresses">Scopes and Special Addresses</h2>
+<p>When working in the world of IPv6, our addresses can vary depending on our scope (i.e. what part of a network):<br />
+<strong>GLOBAL</strong> - Everything (i.e. the whole internet),<br />
+<strong>UNIQUE LOCAL</strong> - Everything in our LAN (behind the internet gateway),<br />
+<strong>LINK LOCAL</strong> - Everything within the same collision domain that will not be routed (i.e. attached to the same switch).</p>
+<table>
+<thead>
+<tr>
+<th>Range</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>::1/128</td>
+<td>Loopback Address (localhost)</td>
+</tr>
+<tr>
+<td>::/128</td>
+<td>Unspecified Address</td>
+</tr>
+<tr>
+<td>2000::/3</td>
+<td>GLOBAL Unicast (Internet)</td>
+</tr>
+<tr>
+<td>fc00::/7</td>
+<td>Unique-Local (LAN)</td>
+</tr>
+<tr>
+<td>fe80::/10</td>
+<td>Link-Local Unicast (Same switch)</td>
+</tr>
+</tbody>
+</table>
+<p>You should always use the smallest possible scope for communication.<br />
+A host can have <strong>multiple</strong> addresses in different scopes, even on the same interface.</p>
+<h2 id="subnetting">Subnetting</h2>
+<p><img src=../assets/IPv6_address_format.png width=600></p>
+<p>As in IPv4, IPv6 includes support for network segmentation via Subnetting. In the image below, the first 64 bits are designated as the <code>Network</code> portion, while the last 64 bits are for <code>Host</code> identification. Within the network portion, the first 48 bits are the <code>Routing Prefix</code> - aka the Network Address. The next and final 16 bits of the network notion is the <code>Subnet ID</code> or subnet address.</p>
+<p><strong>Network+Subnet = Prefix</strong></p>
+<p>The following address:</p>
+<p><code>2003:1000:1000:1600:1234::1</code> formatted fully as <code>2003:1000:1000:1600:1234:0000:0000:0001</code>, consists of the following segments:</p>
+<ul>
+<li><code>2003:1000:1000:1600</code> - Prefix (Combined of Routing Prefix and Subnet ID)</li>
+<li><code>2003:1000:1000</code> - Routing Prefix / Network Address</li>
+<li><code>1600</code> - Subnet ID / Subnet</li>
+</ul>
+<p>If my ISP provider <strong>delegated</strong> a portion of the prefix to me (e.g. <code>2003:1000:1000:1600/56</code>), then I could use the subnets <code>1600</code> through to <code>16FF</code> for my own purposes (Which would give me 256 available subnets).</p>
+<h2 id="ipv6-addresses-in-urisurls">IPv6 Addresses in URIs/URLs</h2>
+<p>Because IPv6 address notation uses colons to isolate hextets, it is necessary to encase the address in square brackets in URIs. For example <code>http://[2a00:1450:4001:82a::2004]</code>. If you wish to specify a port, you can do so as normal using a colon following the closing square bracket: <code>http://[2a00:1450:4001:82a::2004]:80</code>.</p>
+<h2 id="multicast">Multicast</h2>
+<p>Communication from one node to another is called <strong>Unicast</strong>. Communication from one node to many is called <strong>Multicast</strong>.</p>
+<p>The following IPv6 multicast addresses may be used in in the link-local scope:</p>
+<table>
+<thead>
+<tr>
+<th>Range</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ff02::1</td>
+<td>All Nodes within the network segment</td>
+</tr>
+<tr>
+<td>ff02::2</td>
+<td>All Routers within the network segment</td>
+</tr>
+<tr>
+<td>ff02::fb</td>
+<td>mDNSv6</td>
+</tr>
+<tr>
+<td>ff02::1:2</td>
+<td>All DHCP Servers and Agents</td>
+</tr>
+<tr>
+<td>ff02::101</td>
+<td>All NTP Servers</td>
+</tr>
+</tbody>
+</table>
+<p>A full list is maintained by <a href="https://www.iana.org/assignments/ipv6-multicast-addresses/ipv6-multicast-addresses.xhtml">IANA</a></p>
+<p>You can actually ping these addresses, e.g. <code>ping ff02::1</code></p>
+<h2 id="icmp-message-types">ICMP Message Types</h2>
+<p>ICMP does not use ports in order to communicate, but rather <strong>types</strong>. Critical/important types have numbers ranging from 1-127, while informational types have the numbers 128 and above. Each <strong>type</strong> can have subtypes or rather <strong>codes</strong> that can be used for further specifications.  </p>
+<p>Here are some frequently used IPv6 ICMP types:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Code</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td></td>
+<td>Reserved</td>
+</tr>
+<tr>
+<td>1</td>
+<td></td>
+<td>Destination Unreachable</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>No Route to Destination</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>Beyond Scope of Source Address</td>
+</tr>
+<tr>
+<td>3</td>
+<td></td>
+<td>Time Exceeded</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0</td>
+<td>Hop Limit Exceeded in Transit</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Code</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>128</td>
+<td>0</td>
+<td>Echo Request ("ping")</td>
+</tr>
+<tr>
+<td>129</td>
+<td>0</td>
+<td>Echo Reply</td>
+</tr>
+<tr>
+<td>133</td>
+<td>0</td>
+<td>Router Solicitation</td>
+</tr>
+<tr>
+<td>134</td>
+<td>0</td>
+<td>Router Advertisement</td>
+</tr>
+<tr>
+<td>135</td>
+<td>0</td>
+<td>Neighbo(u)r Solicitation</td>
+</tr>
+<tr>
+<td>136</td>
+<td>0</td>
+<td>Neighbo(u)r Advertisement</td>
+</tr>
+</tbody>
+</table>
+<p>A full list is maintained by <a href="https://www.iana.org/assignments/icmpv6-parameters/icmpv6-parameters.xhtml">IANA</a></p>
+<h2 id="dhcpv6">DHCPv6</h2>
+<p>IPv6 addresses can be distributed using the IPv6 version of the <strong>Dynamic Host Configuration Protocol (DHCPv6)</strong>. If a host wishes to obtain an IPv6 address via DHCPv6, it sends out a <strong>DHCP Solicitation</strong> from UDP port 546 to port 547 on the DHCP multicast address <code>ff02::1:2</code>. The DHCP server then replies to the client (from UDP port 547 to UDP port 546) with <strong>DHCP Advertisement</strong>. This handshake can be completed by the client sending out a <strong>DHCP Request</strong> and the server responding with a <strong>DHCP Reply</strong></p>
+<p>The DHCPv6 protocol is explained in more detail in this <a href="https://en.wikipedia.org/wiki/DHCPv6">Wikipedia Article</a></p>
+<h2 id="dhcpv6-vs-slaac">DHCPv6 vs. SLAAC</h2>
+<p>Depending on how the router and the client are set up, the client can (and will) use both mechanisms (i.e. SLAAC and DHCP) to acquire IPv6 address allocations. The following table highlights the possible configuration combinations:</p>
+<p><img src=../assets/dhcp_slaac.jpg></p>
+<h2 id="using-wireshark">Using WireShark</h2>
+<p>To gain a greater understanding of IPv6's functionality, you can use the packet sniffing tool WireShark to trace the message flow. Here are some WS filters for IPv6 ICMP, DHCPv6 and Router Solicitation and Advertisements:</p>
+<p>Show ping and ping reply: <code>icmpv6 and (icmpv6.type==128) or (icmpv6.type==129)</code> <br>
+Router solicit and advertise: <code>icmpv6 and (icmpv6.type==133) or (icmpv6.type==134)</code> <br>
+Show DHCPv6 traffic: <code>dhcpv6</code> <br>
+Router Solicit/Advertise and DHCPv6: <code>dhcpv6 or (icmpv6 and (icmpv6.type==134) or (icmpv6.type==133))</code> <br></p>
+<h3 id="unicast-vs-multicast-vs-broadcast-vs-anycast">Unicast vs. Multicast vs. Broadcast vs. Anycast</h3>
+<p>Within IPv6, there are a range of message options. All of these message types have a single host transmitting the message and all delivery is handled by the switch or router:</p>
+<ul>
+<li><strong>Unicast</strong> is a message sent from a host to one receiver (One to One),</li>
+<li><strong>Broadcast</strong> is a message sent from a host to all other hosts on the same broadcast domain (One to All),</li>
+<li><strong>Multicast</strong> is a message sent from a host to all subscribers of a Multicast group (One to Specific),</li>
+<li><strong>Anycast</strong> is a message sent from a host to the fastest / nearest subscriber of a specific address (One to Specific - Fastest Receiver / Nearest Node will receive).</li>
+</ul>
+<h2 id="sources">Sources</h2>
+<p><a href="https://github.com/onemarcfifty/cheat-sheets/blob/main/networking/ipv6.md">IPv6, Lawrence Whetstone</a>
+<a href="https://www.ciscopress.com/articles/article.asp?p=2803866">IPv6 Address Representation and Address Types, Cisco Press</a></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tracking", "navigation.tabs", "navigation.path", "toc.follow", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "content.code.copy", "navigation.instant", "navigation.sections"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.cd18aaf1.min.js"></script>
+      
+    
+  </body>
+</html>

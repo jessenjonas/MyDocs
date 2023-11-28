@@ -1,0 +1,2206 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.designplace.dk/Networking/Cisco/Security/Basic/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../encryption/">
+      
+      
+      <link rel="icon" href="../../../../assets/images/Logo_Square_Thick.svg">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
+    
+    
+      
+        <title>Cisco Basic Security - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.fad675c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/customization/css/custom.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Cisco Basic Security - My Docs" >
+      
+        <meta  property="og:description"  content="None" >
+      
+        <meta  property="og:image"  content="https://docs.designplace.dk/assets/images/social/Networking/Cisco/Security/Basic.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://docs.designplace.dk/Networking/Cisco/Security/Basic/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Cisco Basic Security - My Docs" >
+      
+        <meta  name="twitter:description"  content="None" >
+      
+        <meta  name="twitter:image"  content="https://docs.designplace.dk/assets/images/social/Networking/Cisco/Security/Basic.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#basic-security" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  <img src="../../../../assets/images/Logo_Square_Thick_White.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Cisco Basic Security
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Welcome
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../../Cooking%20books/" class="md-tabs__link">
+          
+  
+    
+  
+  Cooking books
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../tags/" class="md-tabs__link">
+        
+  
+    
+  
+  Tags
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://designplace.dk/" class="md-tabs__link">
+        
+  
+    
+  
+  Designplace
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  <img src="../../../../assets/images/Logo_Square_Thick_White.svg" alt="logo">
+
+    </a>
+    My Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Cooking%20books/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Cooking books
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Cooking books
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Cooking%20books/Cisco%20cooking%20book/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Cisco cooking book
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Cisco cooking book
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IP%20Addressing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IP Addressing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Routing%20protocols/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Routing Protocols
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2_4" id="__nav_2_2_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Routing Protocols
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Routing%20protocols/RIP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RIP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Routing%20protocols/EIGRP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EIGRP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Routing%20protocols/OSPF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OSPF
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Routing%20protocols/BGP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BGP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_5" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Security
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2_5" id="__nav_2_2_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Security
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Cisco Basic Security
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Cisco Basic Security
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#priviledge-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Priviledge Levels
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Priviledge Levels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limitiations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitiations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#views-role-based-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      Views (Role Based CLI)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Views (Role Based CLI)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accessing-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessing View
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure View
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-superview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure Superview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-cli-views" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verify CLI Views
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secure-ios-image-and-configuration-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Secure IOS image and Configuration file
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Secure IOS image and Configuration file">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enabling-ios-image-resilience-feature" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enabling IOS Image Resilience Feature
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restore-a-primary-bootset-from-a-secure-archive" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restore a primary bootset from a secure archive
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remotely-copy-secured-ios-and-configuration-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      remotely copy Secured IOS and configuration files
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#password-recovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Password Recovery
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autosecure" class="md-nav__link">
+    <span class="md-ellipsis">
+      AutoSecure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AutoSecure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-autosecure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure AutoSecure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aaa" class="md-nav__link">
+    <span class="md-ellipsis">
+      AAA
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AAA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authentication-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication Modes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-local-aaa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure Local AAA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-server-aaa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure Server AAA
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configure Server AAA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tacacs-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      TACACS+ Authentication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#radius-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      RADIUS Authentication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authorization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accounting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accounting
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tacacs-vs-radius" class="md-nav__link">
+    <span class="md-ellipsis">
+      TACACS+ vs RADIUS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TACACS+ vs RADIUS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tacacs" class="md-nav__link">
+    <span class="md-ellipsis">
+      TACACS+
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#radius" class="md-nav__link">
+    <span class="md-ellipsis">
+      RADIUS
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../encryption/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Encryption
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_6" id="__nav_2_2_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    VPN
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            VPN
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../VPN/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VPN Basics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../VPN/configuring_VPN/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cisco VPN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Cheat Sheets
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Cheat Sheets
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IPv4%20Cheat%20Sheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IPv4 Cheat Sheet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IPv6%20Cheat%20Sheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IPv6 Cheat Sheet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tags/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://designplace.dk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Designplace
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#priviledge-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Priviledge Levels
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Priviledge Levels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limitiations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitiations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#views-role-based-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      Views (Role Based CLI)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Views (Role Based CLI)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accessing-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessing View
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure View
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-superview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure Superview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-cli-views" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verify CLI Views
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secure-ios-image-and-configuration-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Secure IOS image and Configuration file
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Secure IOS image and Configuration file">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enabling-ios-image-resilience-feature" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enabling IOS Image Resilience Feature
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restore-a-primary-bootset-from-a-secure-archive" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restore a primary bootset from a secure archive
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remotely-copy-secured-ios-and-configuration-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      remotely copy Secured IOS and configuration files
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#password-recovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Password Recovery
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autosecure" class="md-nav__link">
+    <span class="md-ellipsis">
+      AutoSecure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AutoSecure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-autosecure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure AutoSecure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aaa" class="md-nav__link">
+    <span class="md-ellipsis">
+      AAA
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AAA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authentication-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication Modes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-local-aaa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure Local AAA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-server-aaa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure Server AAA
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configure Server AAA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tacacs-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      TACACS+ Authentication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#radius-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      RADIUS Authentication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authorization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accounting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accounting
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tacacs-vs-radius" class="md-nav__link">
+    <span class="md-ellipsis">
+      TACACS+ vs RADIUS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TACACS+ vs RADIUS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tacacs" class="md-nav__link">
+    <span class="md-ellipsis">
+      TACACS+
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#radius" class="md-nav__link">
+    <span class="md-ellipsis">
+      RADIUS
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+<nav class="md-tags" >
+  
+    
+    
+    
+      <a href="../../../../tags/#networking" class="md-tag">Networking</a>
+    
+  
+    
+    
+    
+      <a href="../../../../tags/#security" class="md-tag">Security</a>
+    
+  
+</nav>
+
+
+
+<h1 id="basic-security">Basic Security</h1>
+<h2 id="priviledge-levels">Priviledge Levels</h2>
+<p>By default, the Cisco IOS software CLI has two levels of access to commands:</p>
+<ul>
+<li><strong>User EXEC mode (privilege level 1)</strong><br />
+This provides the lowest EXEC mode user privileges and allows only user-level commands available at the Router&gt; prompt.  </li>
+<li><strong>Privileged EXEC mode (privilege level 15)</strong><br />
+This includes all enable-level commands at the Router# prompt.</li>
+</ul>
+<p>There are 16 privilege levels in total, as listed below. The higher the privilege level, the more router access a user has. Commands that are available at lower privilege levels are also executable at higher levels.</p>
+<ul>
+<li><strong>Level 0:</strong> Predefined for user-level access privileges. Seldom used, but includes five commands: disable, enable, exit, help, and logout.</li>
+<li><strong>Level 1:</strong> The default level for login with the router prompt Router &gt;. A user cannot make any changes or view the running configuration file.</li>
+<li><strong>Levels 2 - 14:</strong> May be customized for user-level privileges. Commands from lower levels may be moved up to another higher level, or commands from higher levels may be moved down to a lower level.</li>
+<li><strong>Level 15:</strong> Reserved for the enable mode privileges (enable command). Users can change configurations and view configuration files.</li>
+</ul>
+<h3 id="command-example">Command example</h3>
+<pre><code>Router(config)# privilege mode {level level|reset} command
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>mode</em></td>
+<td>Specifies the configuration mode. Use the <strong>privilege ?</strong> command to see a complete list of router configuration modes available on your router.</td>
+</tr>
+<tr>
+<td>level</td>
+<td>(Optional) Enables setting a privilege level with a specified command.</td>
+</tr>
+<tr>
+<td>*level</td>
+<td>(Optional) The privilege level that is associated with a command. You can specify up to 16 privilege levels, using numbers 0 to 15.</td>
+</tr>
+<tr>
+<td>reset</td>
+<td>(Optional) Resets the privilege level of a command.</td>
+</tr>
+<tr>
+<td><em>command</em></td>
+<td>(Optional) Argument to use when you want to reset the privilege level.</td>
+</tr>
+</tbody>
+</table>
+<p>There are two methods for assigning passwords to the different privilege levels:<br />
+To a user that is granted a specific privilege level, use the username name privilege level secret password global configuration mode command
+To the privilege level, use the enable secret level level password global configuration mode command</p>
+<p>Use the username command to assign a privilege level to a specific user. Use the enable secret command to assign a privilege level to a specific EXEC mode password.</p>
+<pre><code>Router(config)# !Level 5 and SUPPORT user configuration
+Router(config)# privilege exec level 5 ping
+Router(config)# enable algorithm-type scrypt secret level 5 cisco5
+Router(config)# username SUPPORT privilege 5 algorithm-type scrypt secret cisco5
+</code></pre>
+<h3 id="limitiations">Limitiations</h3>
+<ul>
+<li>There is no access control to specific interfaces, ports, logical interfaces, and slots on a router.</li>
+<li>Commands available at lower privilege levels are always executable at higher levels.</li>
+<li>Commands specifically set at a higher privilege level are not available for lower privileged users.</li>
+<li>Assigning a command with multiple keywords allows access to all commands that use those keywords. For example, allowing access to show ip route allows the user access to all show and show ip commands.</li>
+</ul>
+<h2 id="views-role-based-cli">Views (Role Based CLI)</h2>
+<p><img src=../assets/Role-Based+Views+Role-Based+Views.jpg width=800></p>
+<p>Role-based CLI provides three types of views that dictate which commands are available:</p>
+<p><strong>Note:</strong> Max 15 views (excluding root view)</p>
+<ul>
+<li>
+<p><strong>Root View</strong><br />
+To configure any view for the system, the administrator must be in root view. Root view has the same access privileges as a user who has level 15 privileges. However, a root view is not the same as a level 15 user. Only a root view user can configure a new view and add or remove commands from the existing views.</p>
+</li>
+<li>
+<p><strong>CLI View</strong><br />
+A specific set of commands can be bundled into a CLI view. Unlike privilege levels, a CLI view has no command hierarchy and no higher or lower views. Each view must be assigned all commands associated with that view. A view does not inherit commands from any other view. Additionally, the same commands can be used in multiple views.</p>
+</li>
+<li>
+<p><strong>Superview</strong><br />
+    A superview consists of one or more CLI views.<br />
+    Administrators can define which commands are accepted and which configuration information is visible.</p>
+<p>Superviews allow a network administrator to assign users and groups of users multiple CLI views at once, instead of having to assign a single CLI view per user with all commands associated with that one CLI view.</p>
+<p>Superviews have several specific characteristics:</p>
+<ul>
+<li>A single CLI view can be shared within multiple superviews.</li>
+<li>Commands cannot be configured for a superview.</li>
+<li>An administrator must add commands to the CLI view and add that CLI view to the superview.</li>
+<li>Users who are logged into a superview can access all the commands that are configured for any of the CLI views that are part of the superview.</li>
+<li>Each superview has a password that is used to switch between superviews or from a CLI view to a superview.</li>
+<li>Deleting a superview does not delete the associated CLI views. The CLI views remain available to be assigned to another superview.</li>
+</ul>
+</li>
+</ul>
+<p><em>AAA must be enabled using the</em> <strong><em>aaa new-model</em></strong> <em>command, before an view can be created.</em></p>
+<h3 id="accessing-view">Accessing View</h3>
+<pre><code>Router# enable [view [view-name]]
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>view</td>
+<td>This parameter enters root view if no view-name is specified, which enables an administrator to configure CLI views. The view parameter is required to configure a CLI view.</td>
+</tr>
+<tr>
+<td>view-name</td>
+<td>(Optional) This parameter enters or exits a specified CLI view. This parameter can be used to switch from one CLI view to another CLI view.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="configure-view">Configure View</h3>
+<pre><code>Router(config)# parser view *view-name* !Create view
+Router(config-view)# secret *password* !Sets password to protect access to view
+Router(config-view)# commands *parser-mode* {include | include-exclusive | exclude} [all] [interface interface-name | command]
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Commands</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>commands</td>
+<td>Adds commands or interfaces to a view.</td>
+</tr>
+<tr>
+<td><em>parser-mode</em></td>
+<td>The mode in which the specified command exists; for example, EXEC mode.</td>
+</tr>
+<tr>
+<td>include</td>
+<td>Adds a command or an interface to the view and allows the same command or interface to be added to other views.</td>
+</tr>
+<tr>
+<td>include-exclusive</td>
+<td>Adds a command or an interface to the view and excludes the same command or interface from being added to all other views.</td>
+</tr>
+<tr>
+<td>exclude</td>
+<td>Excludes a command or an interface from the view.</td>
+</tr>
+<tr>
+<td>all</td>
+<td>A "wildcard" that allows every command in a specified configuration mode that begins with the same keyword or every subinterface for a specified interface to be part of the view..</td>
+</tr>
+<tr>
+<td>interface <em>interface-name</em></td>
+<td>Interface that is added to the view.</td>
+</tr>
+<tr>
+<td><em>command</em></td>
+<td>Command that is added to the view.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="configure-superview">Configure Superview</h3>
+<pre><code>Router(config)# parser view *view-name* !Create superview
+Router(config-view)# secret *password* !Sets password to protect access to view
+Router(config-view)# view *view-name* !Assign an existing view
+</code></pre>
+<h3 id="verify-cli-views">Verify CLI Views</h3>
+<p>From the root view, use the following command to see a summary of all views. Notice how the asterisk identifies superviews.</p>
+<pre><code>Router# show parser view all command
+</code></pre>
+<h2 id="secure-ios-image-and-configuration-file">Secure IOS image and Configuration file</h2>
+<p>The Cisco IOS resilient configuration feature allows for faster recovery if someone maliciously or unintentionally reformats flash memory or erases the startup configuration file in nonvolatile random-access memory (NVRAM).<br />
+The feature maintains a secure working copy of the router IOS image file and a copy of the running configuration file.<br />
+These secure files cannot be removed by the user and are referred to as the primary bootset.</p>
+<ul>
+<li>The configuration file in the primary bootset is a copy of the running configuration that was in the router when the feature was first enabled.</li>
+<li>The feature secures the smallest working set of files to preserve persistent storage space.</li>
+<li>No extra space is required to secure the primary Cisco IOS image file. The feature automatically detects image or configuration version mismatch.</li>
+<li>Only local storage is used for securing files, eliminating scalability maintenance challenges from storing multiple images and configurations on TFTP servers.</li>
+<li>The feature can be disabled only through a console session.</li>
+</ul>
+<p><strong>Note:</strong> The feature is only available on older routers that support a PCMCIA Advanced Technology Attachment (ATA) flash interface.<br />
+Newer routers such as the ISR 4000 do not support this feature.</p>
+<h3 id="enabling-ios-image-resilience-feature">Enabling IOS Image Resilience Feature</h3>
+<pre><code>R1(config)# secure boot-image !Securing Boot Image
+R1(config)# secure boot-config !Securing Boot Config
+</code></pre>
+<p>Use the <strong>show secure bootset</strong> command to verify the existence of the archive.</p>
+<h3 id="restore-a-primary-bootset-from-a-secure-archive">Restore a primary bootset from a secure archive</h3>
+<p>Reload into ROM monitor (ROMmon) mode, boot into the secured bootset image, in Global Config restore the configuration to a filename of your choice using the <em>secure boot-config restore</em> command followed by the flash memory location.<br />
+Then exit Global Config and issue the copy command to copy the rescued config file to the running configuration.</p>
+<pre><code>Router# reload 
+&lt;Issue Break sequence, if necessary&gt; 
+rommon 1 &gt; dir flash0:
+rommon 2 &gt; boot flash0:c2900-universalk9-mz.SPA.154-3.M.bin &lt;Router reboots with specified image&gt;
+Router&gt; enable
+Router# conf t
+Router(config)# secure boot-config restore flash0:*rescue-cfg*
+Router(config)# end 
+Router# copy flash0:rescue-cfg running-config
+</code></pre>
+<h3 id="remotely-copy-secured-ios-and-configuration-files">remotely copy Secured IOS and configuration files</h3>
+<p>The Secure Copy Protocol (SCP) feature is used to remotely copy these files.<br />
+SCP provides a secure and authenticated method for copying router configuration or router image files to a remote location.</p>
+<p>The process to configure a router for server-side SCP with local AAA is:
+1. Configure SSH, if not already configured.
+2. For local authentication, configure at least one local database user with privilege level 15.
+3. Enable AAA with the aaa new-model global configuration mode command.
+4. Use the aaa authentication login default local command to specify that the local database be used for authentication.
+5. Use the aaa authorization exec default local command to configure command authorization. In this example, all local users will have access to EXEC commands.
+6. Enable SCP server-side functionality with the ip scp server enable command.</p>
+<p>Now assume that we want to securely copy the backup configuration of a router named R2 to the SCP server, which is R1.<br />
+As shown in the command output below, we would use the copy command on R2, and specify specify the source file location first (flash0:R2backup.cfg), and then the destination (scp:).<br />
+After answering the series of prompts to establish a connection to the SCP server on R1, the file will be copied.</p>
+<pre><code>R2# copy flash0:R2backup.cfg scp: 
+Address or name of remote host []? 10.1.1.1 
+Destination username [R2]? Bob 
+Destination filename [R2backup.cfg]?  
+Writing R2backup.cfg  
+Password: &lt;cisco12345&gt;
+</code></pre>
+<p>On R1, you can enter the debug ip scp command to watch the transfer proceed, as shown in the following example. The most common authentication issue is an incorrect username/password combination. There is also an authentication failure if the username/password combination was not configured with the privilege 15 keyword on the SCP server.</p>
+<pre><code>R1# debug ip scp
+Incoming SCP debugging is on 
+R1# 
+*Feb 18 20:37:15.363: SCP: [22 -&gt; 10.1.1.2:61656] send  *Feb 18 20:37:15.367: SCP: [22 &lt;- 10.1.1.2:61656] recv C0644 1381 R2backup.cfg *Feb 18 20:37:15.367: SCP: [22 -&gt; 10.1.1.2:61656] send
+</code></pre>
+<h2 id="password-recovery">Password Recovery</h2>
+<p>Using the <em>no service password-recovery</em> Global Config command, all access to ROMmon mode is disabled.<br />
+This way an attacker who gains physical access to a router, and tries to boot into ROMmon, the startup configuration will be erased, completely, and it will boot into the factory default configuration.</p>
+<pre><code>no service password-recovery
+</code></pre>
+<p><em>When the router is booted, the initial boot sequence displays a message stating PASSWORD RECOVERY FUNCTIONALITY IS DISABLED.</em></p>
+<p><strong>CAUTION: </strong>If the router flash memory does not contain a valid Cisco IOS image because of corruption or deletion, the ROMmon xmodem command cannot be used to load a new flash image. To repair the router, an administrator must obtain a new Cisco IOS image on a flash SIMM or on a PCMCIA card. However, if an administrator has access to ROMmon they can restore an IOS file to flash memory using a TFTP server. Refer to Cisco.com for more information regarding backup flash images.</p>
+<h2 id="autosecure">AutoSecure</h2>
+<p>Released in IOS version 12.3, Cisco AutoSecure is a feature that is initiated from the CLI and executes a script.<br />
+AutoSecure first makes recommendations for fixing security vulnerabilities and then modifies the security configuration of the router, as shown in the figure.</p>
+<p>AutoSecure can lock down the management plane functions and the forwarding plane services and functions of a router. There are several management plane services and functions:</p>
+<ul>
+<li>Secure BOOTP, CDP, FTP, TFTP, PAD, UDP, and TCP small servers, MOP, ICMP (redirects, mask-replies), IP source routing, Finger, password encryption, TCP keepalives, gratuitous ARP, proxy ARP, and directed broadcast</li>
+<li>Legal notification using a banner</li>
+<li>Secure password and login functions</li>
+<li>Secure NTP</li>
+<li>Secure SSH access</li>
+<li>TCP intercept services</li>
+</ul>
+<p>There are three forwarding plane services and functions that AutoSecure enables:</p>
+<ul>
+<li>Cisco Express Forwarding (CEF)</li>
+<li>Traffic filtering with ACLs</li>
+<li>Cisco IOS firewall inspection for common protocols</li>
+</ul>
+<h3 id="configure-autosecure">Configure AutoSecure</h3>
+<p>Use the auto secure command to enable the Cisco AutoSecure feature setup.<br />
+This setup can be interactive or non-interactive.</p>
+<pre><code>Router# auto secure {no-interact | full} [forwarding | management] [ntp | login | ssh | firewall | top-intercept]
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Optional Parameters</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>no-interact</td>
+<td>The user will not be prompted for any interactive configurations. No interactive dialogue parameters will be configured, including usernames or passwords.</td>
+</tr>
+<tr>
+<td>full</td>
+<td>The user will be prompted for all interactive questions. This is the default setting.</td>
+</tr>
+<tr>
+<td>forwarding</td>
+<td>Only the forwarding plane<sup id="fnref2:1"><a class="footnote-ref" href="#fn:1">1</a></sup> will be secured.</td>
+</tr>
+<tr>
+<td>management</td>
+<td>Only the management plane<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>will be secured.</td>
+</tr>
+<tr>
+<td>ntp</td>
+<td>Specifies the configuration of the NTP feature in the AutoSecure CLI.</td>
+</tr>
+<tr>
+<td>login</td>
+<td>Specifies the configuration of the login feature in the AutoSecure CLI.</td>
+</tr>
+<tr>
+<td>ssh</td>
+<td>Specifies the configuration of the SSH feature in the AutoSecure CLI.</td>
+</tr>
+<tr>
+<td>firewall</td>
+<td>Specifies the configuration of the firewall feature in the AutoSecure CLI.</td>
+</tr>
+<tr>
+<td>tcp-intercept</td>
+<td>Specifies the configuration of the TCP intercept feature in the AutoSecure CLI.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="aaa">AAA</h2>
+<p>AAA network security services provide the primary framework to set up access control on a network device.<br />
+AAA is a way to control who is permitted to access a network (<strong>authenticate</strong>) and what they can do while they are there (<strong>authorize</strong>).<br />
+AAA also allows auditing of the actions that users perform while accessing the network (<strong>accounting</strong>).</p>
+<p>Network and administrative AAA security in the Cisco environment has three functional components:</p>
+<ul>
+<li><strong>Authentication -</strong> Users and administrators must prove their identity before accessing the network and network resources.<br />
+Authentication can be established using username and password combinations, challenge and response questions, token cards, and other methods.<br />
+For example: “I am user ‘student’ and I know the password to prove it.”</li>
+<li><strong>Authorization -</strong> After the user is authenticated, authorization services determine which resources the user can access and which operations the user is allowed to perform.<br />
+An example is “User ‘student’ can access host serverXYZ using SSH only.”</li>
+<li><strong>Accounting and auditing</strong> - Accounting records what the user does, including what is accessed, the amount of time the resource is accessed, and any changes that were made.<br />
+Accounting keeps track of how network resources are used. An example is "User 'student' accessed host serverXYZ using SSH for 15 minutes."</li>
+</ul>
+<h3 id="authentication-modes">Authentication Modes</h3>
+<p>AAA Authentication can be used to authenticate users for administrative access or it can be used to authenticate users for remote network access.<br />
+Cisco provides two common methods of implementing AAA services:
+- <strong>Local AAA Authentication</strong>
+- <strong>Server-Based AAA Authentication:</strong> The router uses either the Remote Authentication Dial-In User Service (RADIUS) or Terminal Access Controller Access Control System (TACACS+) protocols to communicate with the AAA server.<br />
+When there are multiple routers and switches, server-based AAA is more appropriate because accounts can be administered from a central location rather than on individual devices.</p>
+<h3 id="configure-local-aaa">Configure Local AAA</h3>
+<pre><code>Router(config)# aaa authentication login {default | list-name} method1…[ method4 ]
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>default</td>
+<td>Uses the listed authentication methods that follow this keyword as the default list of methods when a user logs in.</td>
+</tr>
+<tr>
+<td>list-name</td>
+<td>Instead of using default list name, the administrator may wish to specify a name for documentation purposes. The name can be up to 31 characters.</td>
+</tr>
+<tr>
+<td>method1...[method4]</td>
+<td>Identifies the list of methods that the AAA authentication process will query in the given sequence. At least one method must be specified. A maximum of four methods may be specified.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Method Type Keywords</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>enable</td>
+<td>Uses the enable password for authentication.</td>
+</tr>
+<tr>
+<td>local</td>
+<td>Uses the local username database for authentication.</td>
+</tr>
+<tr>
+<td>local-case</td>
+<td>Uses case-sensitive local username authentication.</td>
+</tr>
+<tr>
+<td>none</td>
+<td>Uses no authentication.</td>
+</tr>
+<tr>
+<td>group radius</td>
+<td>Uses the list of all RADIUS servers for authentication.</td>
+</tr>
+<tr>
+<td>group tacacs+</td>
+<td>Uses the list of all TACACS+ servers for authentication.</td>
+</tr>
+<tr>
+<td>group <em>group-name</em></td>
+<td>Uses a subset of RADIUS or TACACS+ servers for authentication as defined by the aaa group server radius or aaa group server tacacs+ command.</td>
+</tr>
+</tbody>
+</table>
+<p>Then apply it on the VTY lines:</p>
+<pre><code>login authentication &lt;list&gt;
+</code></pre>
+<h3 id="configure-server-aaa">Configure Server AAA</h3>
+<h4 id="tacacs-authentication">TACACS+ Authentication</h4>
+<pre><code>R1(config)# aaa new-model 
+R1(config)# tacacs server Server-T
+R1(config-server-tacacs)# address ipv4 192.168.1.101
+R1(config-server-tacacs)# single-connection
+R1(config-server-tacacs)# key TACACS-Pa55w0rd !Shared Secret
+R1(config-server-tacacs)# exit
+</code></pre>
+<h4 id="radius-authentication">RADIUS Authentication</h4>
+<pre><code>R1(config)# aaa new-model
+R1(config)# radius server SERVER-R
+R1(config-radius-server)# address ipv4 192.168.1.100 auth-port 1812 acct-port 1813
+R1(config-radius-server)# key RADIUS-Pa55w0rd !Shared Secret
+R1(config-radius-server)# exit
+</code></pre>
+<h4 id="authorization">Authorization</h4>
+<ul>
+<li><strong>network</strong> - for network services such as PPP and SLIP</li>
+<li><strong>exec</strong> - for User EXEC terminal sessions</li>
+<li>
+<p><strong>commands level</strong> - command authorization attempts authorization for all EXEC mode commands, including global configuration commands, associated with a specific privilege level</p>
+<p>Router(config)# aaa authorization (network | exec | commands level) {default | list-name} method1… [method4]</p>
+</li>
+</ul>
+<p><strong>Note:</strong> When AAA authorization is not enabled, all users are allowed full access.<br />
+After authentication is started, the default changes to allow no access.<br />
+This means that the administrator must create a user with full access rights before authorization is enabled, as shown in the example.<br />
+Failure to do so immediately locks the administrator out of the system the moment the aaa authorization command is entered. The only way to recover from this is to reboot the router.<br />
+If this is a production router, rebooting might be unacceptable.<br />
+Be sure that at least one user always has full rights.</p>
+<h4 id="accounting">Accounting</h4>
+<ul>
+<li><strong>network</strong> - Runs accounting for all network-related service requests, including PPP.</li>
+<li><strong>exec</strong> - Runs accounting for the EXEC shell session.</li>
+<li>
+<p><strong>connection</strong> - Runs accounting on all outbound connections such as SSH and Telnet.</p>
+<p>Router(config)# aaa accounting {network | exec | connection} {default | list-name} {start-stop | stop-only | none } [broadcast] method1...[method4]</p>
+</li>
+</ul>
+<p>Next, the record type, or trigger, is configured. 
+The trigger specifies what actions cause accounting records to be updated. 
+Possible triggers include:</p>
+<ul>
+<li><strong>start-stop</strong> - Sends a "start" accounting notice at the beginning of a process and a "stop" accounting notice at the end of a process.</li>
+<li><strong>stop-only</strong> - Sends a "stop" accounting record for all cases including authentication failures.</li>
+<li><strong>none</strong> - Disables accounting services on a line or interface.</li>
+</ul>
+<h3 id="tacacs-vs-radius">TACACS+ vs RADIUS</h3>
+<h4 id="tacacs">TACACS+</h4>
+<p>A Cisco enhancement to the original TACACS protocol. Despite its name, TACACS+ is an entirely new protocol that is incompatible with any previous version of TACACS.<br />
+TACACS+ is supported by the Cisco family of routers and access servers.</p>
+<p>TACACS+ provides separate AAA services.<br />
+Separating the AAA services provides flexibility in implementation because it is possible to use TACACS+ for authorization and accounting while using another method of authentication.</p>
+<p>The extensions to the TACACS+ protocol provide more types of authentication requests and response codes than were in the original TACACS specification.<br />
+TACACS+ offers multiprotocol support, such as IP and legacy AppleTalk.<br />
+Normal TACACS+ operation encrypts the entire body of the packet for more secure communications and utilizes TCP port 49.</p>
+<h4 id="radius">RADIUS</h4>
+<p>An open IETF standard AAA protocol for applications such as network access or IP mobility.<br />
+RADIUS works in both local and roaming situations and is commonly used for accounting purposes.</p>
+<p>The RADIUS protocol hides passwords during transmission, even with the Password Authentication Protocol (PAP), using a rather complex operation that involves Message Digest 5 (MD5) hashing and a shared secret.<br />
+However, the rest of the packet is sent in plaintext.</p>
+<p>RADIUS combines authentication and authorization as one process.<br />
+When a user is authenticated, that user is also authorized.<br />
+RADIUS uses UDP port 1645 or 1812 for authentication and UDP port 1646 or 1813 for accounting.</p>
+<p>RADIUS is widely used by VoIP service providers.<br />
+It passes login credentials of a SIP endpoint, such as a broadband phone, to a SIP registrar using digest authentication, and then to a RADIUS server using RADIUS.<br />
+RADIUS is also a common authentication protocol that is utilized by the 802.1X security standard.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Please see the <a href="/Networking/Cisco/Basic/#plane">Basic configuration</a> for further details about Management plane and forwarding plane.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tracking", "navigation.tabs", "navigation.path", "toc.follow", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "content.code.copy", "navigation.instant", "navigation.sections"], "search": "../../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.cd18aaf1.min.js"></script>
+      
+    
+  </body>
+</html>

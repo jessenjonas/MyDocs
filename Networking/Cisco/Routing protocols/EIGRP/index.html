@@ -1,0 +1,1903 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.designplace.dk/Networking/Cisco/Routing%20protocols/EIGRP/">
+      
+      
+        <link rel="prev" href="../RIP/">
+      
+      
+        <link rel="next" href="../OSPF/">
+      
+      
+      <link rel="icon" href="../../../../assets/images/Logo_Square_Thick.svg">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
+    
+    
+      
+        <title>EIGRP - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.fad675c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/customization/css/custom.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="EIGRP - My Docs" >
+      
+        <meta  property="og:description"  content="None" >
+      
+        <meta  property="og:image"  content="https://docs.designplace.dk/assets/images/social/Networking/Cisco/Routing protocols/EIGRP.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://docs.designplace.dk/Networking/Cisco/Routing%20protocols/EIGRP/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="EIGRP - My Docs" >
+      
+        <meta  name="twitter:description"  content="None" >
+      
+        <meta  name="twitter:image"  content="https://docs.designplace.dk/assets/images/social/Networking/Cisco/Routing protocols/EIGRP.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#eigrp" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  <img src="../../../../assets/images/Logo_Square_Thick_White.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              EIGRP
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Welcome
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../../Cooking%20books/" class="md-tabs__link">
+          
+  
+    
+  
+  Cooking books
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../tags/" class="md-tabs__link">
+        
+  
+    
+  
+  Tags
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://designplace.dk/" class="md-tabs__link">
+        
+  
+    
+  
+  Designplace
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  <img src="../../../../assets/images/Logo_Square_Thick_White.svg" alt="logo">
+
+    </a>
+    My Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Cooking%20books/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Cooking books
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Cooking books
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Cooking%20books/Cisco%20cooking%20book/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Cisco cooking book
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Cisco cooking book
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IP%20Addressing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IP Addressing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Routing Protocols
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2_4" id="__nav_2_2_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Routing Protocols
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RIP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RIP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    EIGRP
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    EIGRP
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-eigrp" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is EIGRP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summarization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summarization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stub-router" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stub router
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#path-metric-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Path Metric Calculation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#router-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      Router ID
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eigrp_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      EIGRP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eigrpv6" class="md-nav__link">
+    <span class="md-ellipsis">
+      EIGRPv6
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#named-eigrp-ipv4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Named EIGRP IPv4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#named-eigrp-ipv6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Named EIGRP IPv6
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#summarization_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summarization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stub-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stub Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#altering-the-k-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Altering the K values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#altering-the-delay-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      Altering the delay value
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication-on-eigrp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication on EIGRP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication-on-named-eigrp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication on Named EIGRP
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redistribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redistribution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Redistribution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eigrp_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      EIGRP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eigrpv6_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      EIGRPv6
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eigrp-named-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      EIGRP Named configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OSPF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OSPF
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BGP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BGP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Security/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Security
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2_5" id="__nav_2_2_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Security
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Security/Basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cisco Basic Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Security/encryption/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Encryption
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_6" id="__nav_2_2_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    VPN
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            VPN
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../VPN/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VPN Basics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../VPN/configuring_VPN/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cisco VPN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Cheat Sheets
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Cheat Sheets
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IPv4%20Cheat%20Sheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IPv4 Cheat Sheet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IPv6%20Cheat%20Sheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IPv6 Cheat Sheet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tags/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://designplace.dk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Designplace
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-eigrp" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is EIGRP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summarization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summarization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stub-router" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stub router
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#path-metric-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Path Metric Calculation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#router-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      Router ID
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eigrp_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      EIGRP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eigrpv6" class="md-nav__link">
+    <span class="md-ellipsis">
+      EIGRPv6
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#named-eigrp-ipv4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Named EIGRP IPv4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#named-eigrp-ipv6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Named EIGRP IPv6
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#summarization_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summarization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stub-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stub Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#altering-the-k-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Altering the K values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#altering-the-delay-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      Altering the delay value
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication-on-eigrp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication on EIGRP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication-on-named-eigrp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication on Named EIGRP
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redistribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redistribution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Redistribution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eigrp_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      EIGRP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eigrpv6_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      EIGRPv6
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eigrp-named-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      EIGRP Named configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+<nav class="md-tags" >
+  
+    
+    
+    
+      <a href="../../../../tags/#networking" class="md-tag">Networking</a>
+    
+  
+</nav>
+
+
+
+<h1 id="eigrp"><abbr title="Enhanced Interior Gateway Routing Protocol">EIGRP</abbr></h1>
+<p><img src=../assets/EIGRP.png width=400></p>
+<h2 id="what-is-eigrp">What is <abbr title="Enhanced Interior Gateway Routing Protocol">EIGRP</abbr></h2>
+<p><abbr title="Enhanced Interior Gateway Routing Protocol">EIGRP</abbr>, developed by Cisco - and proprietary to Cisco, is an advanced distance vector routing protocol. In contrary to the older IGRP, which are a distance vector routing protocol, <abbr title="Enhanced Interior Gateway Routing Protocol">EIGRP</abbr> includes features, found in link-state protocols, that are not present in IGRP or RIP, which is why it is reffered to as an advanced distance vector.</p>
+<p>By storing it’s neighbors routing table, EIGRPs algorithm, DUAL, ensures that a router running <abbr title="Enhanced Interior Gateway Routing Protocol">EIGRP</abbr> quickly can adapt to changes in the network - resulting in rapid convergence and a loop free network.</p>
+<p><img src=../assets/EIGRP_Successor.png width=400></p>
+<p><abbr title="Enhanced Interior Gateway Routing Protocol">EIGRP</abbr> uses DUAL to calculate the cost for each path to a destination network in it’s AS using the path’s distance information, AKA composite metric.<br />
+Then it stores up to 4 successor routes, if having the same <abbr title="Reported distance">RD</abbr>, and all the feasible successors, which all must satisfy the feasiblity condition of having a <abbr title="Reported distance">RD</abbr> lower than the <abbr title="Reported distance">RD</abbr> of the successor route, AKA the <abbr title="Feasible distance">FD</abbr>. The lower the cost, the better.</p>
+<p>With <code>show ip eigrp topology</code> we can see the successor, and feasible successor, routes, alongside their reported distances.</p>
+<p><img src=../assets/EIGRP_Topology.png width=400></p>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Successor route</td>
+<td>The route with the lowest path metric to reach a destination.<br>The successor route for R1 to reach 10.4.4.0/24 on R4 is R1→R3→R4.</td>
+</tr>
+<tr>
+<td>Successor</td>
+<td>The first next-hop router for the successor route.<br>The successor for 10.4.4.0/24 is R3.</td>
+</tr>
+<tr>
+<td>Feasible distance (<abbr title="Feasible distance">FD</abbr>)</td>
+<td>The metric value for the lowest-metric path to reach a destination. The feasible distance is calculated locally using the formula shown in the “Path Metric Calculation” section.<br>The <abbr title="Feasible distance">FD</abbr> calculated by R1 for the 10.4.4.0/24 network is 3328<br>(that is, 256 + 256 + 2816).</td>
+</tr>
+<tr>
+<td>Reported distance (<abbr title="Reported distance">RD</abbr>)</td>
+<td>Distance reported by a router to reach a prefix. The reported distance value<br>is the feasible distance for the advertising router.<br>R3 advertises the 10.4.4.0/24 prefix with an <abbr title="Reported distance">RD</abbr> of 3072. R4 advertises the 10.4.4.0/24 to R1 and R2 with an <abbr title="Reported distance">RD</abbr> of 2816.</td>
+</tr>
+<tr>
+<td>Feasibility condition</td>
+<td>For a route to be considered a backup route, the <abbr title="Reported distance">RD</abbr> received for that route<br>must be less than the <abbr title="Feasible distance">FD</abbr> calculated locally. This logic guarantees a loop-free path.</td>
+</tr>
+<tr>
+<td>Feasible successor</td>
+<td>A route with that satisfies the feasibility condition is maintained as a backup route. The feasibility condition ensures that the backup route is loop free.<br>The route R1→R4 is the feasible successor because the <abbr title="Reported distance">RD</abbr> of 2816 is lower than the <abbr title="Feasible distance">FD</abbr> of 3328 for the R1→R3→R4 path.</td>
+</tr>
+</tbody>
+</table>
+<p>EIGRIP uses IP protocol number 88 and is using multicast packets where possible, and unicast packets when necessary. Communication between routers is done using the group address 224.0.0.10 or the MAC address 01:00:5e:00:00:0a when possible.</p>
+<table>
+<thead>
+<tr>
+<th><abbr title="Enhanced Interior Gateway Routing Protocol">EIGRP</abbr></th>
+<th>EIGRPv6</th>
+<th>Named <abbr title="Enhanced Interior Gateway Routing Protocol">EIGRP</abbr></th>
+<th>Facts</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IPv4<br><em>Global config</em></td>
+<td>IPv6<br><em>Int config</em></td>
+<td>IPv4 &amp; IPv6<br><em>Global configuration</em></td>
+<td>Type</td>
+<td>Advanced<br>Distance Vector</td>
+</tr>
+<tr>
+<td></td>
+<td>No VRF support</td>
+<td>Single place configuration</td>
+<td>Algorithm</td>
+<td>DUAL</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>IPv6 VRF support</td>
+<td>Standard</td>
+<td>Cisco proprietary</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>Protocol</td>
+<td><abbr title="Reliable Transport Protocol">RTP</abbr></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>Group</td>
+<td>IGP</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>Load balacing</td>
+<td>Equal &amp; Unequal</td>
+</tr>
+</tbody>
+</table>
+<h2 id="summarization">Summarization</h2>
+<p><img src=../assets/EIGRP_Summarization.png width=400></p>
+<p><abbr title="Enhanced Interior Gateway Routing Protocol">EIGRP</abbr> summarizes network prefixes on an interface-by-interface basis.<br />
+When summarization is applied on a interface, all previously advertised routes contained by the summarization address will be suppresed, and the new summarized route is advertised instead.</p>
+<p><strong>OBS</strong> - This can cause issues when having networks that are not desirable to be advertised.</p>
+<p>This can however be somewhat solved by using the <code>leak-map</code> option, which allows to only discard routes belonging in an route-map.</p>
+<p>To prevent looping, a discard route (Null route) is will be used for the summary route. This results in packages being discarded, when the destination network doesn't exist in the routing table.</p>
+<h2 id="stub-router">Stub router</h2>
+<p><img src=../assets/EIGRP_Stub.png width=400></p>
+<p>The <abbr title="Enhanced Interior Gateway Routing Protocol">EIGRP</abbr> stub functionality prevents scenarios like this from happening and allows an <abbr title="Enhanced Interior Gateway Routing Protocol">EIGRP</abbr> router to conserve router resources.  <br />
+An <abbr title="Enhanced Interior Gateway Routing Protocol">EIGRP</abbr> stub router, depening on the configuration, does not advertise routes that it learns from other <abbr title="Enhanced Interior Gateway Routing Protocol">EIGRP</abbr> peers.</p>
+<ul>
+<li><strong>Receive-only:</strong> The stub router will not advertise any network.</li>
+<li><strong>Connected:</strong> allows the stub router to advertise directly connected networks.</li>
+<li><strong>Static:</strong> allows the stub router to advertise static routes (you have to redistribute them).</li>
+<li><strong>Summary:</strong> allows the stub router to advertise summary routes.</li>
+<li><strong>Redistribute:</strong> allows the stub router to advertise redistributed routes.</li>
+</ul>
+<p>The <abbr title="Enhanced Interior Gateway Routing Protocol">EIGRP</abbr> stub router announces itself as a stub within the <abbr title="Enhanced Interior Gateway Routing Protocol">EIGRP</abbr> hello packet.<br />
+This provides faster convergence within an <abbr title="Enhanced Interior Gateway Routing Protocol">EIGRP</abbr> autonomous system because it decreases the size of the query domain for that prefix.</p>
+<h2 id="path-metric-calculation">Path Metric Calculation</h2>
+<p>When calculating the paths for a destination network. All paths to a destination network must be added together, including the path after the destination router.<br />
+The reason for this, is that the destination router could have multiple redundant links. This way the fastest link will be choosen over a slower link.</p>
+<p><img src=../assets/EIGRP_Metric.png width=400>
+<img src=../assets/EIGRP_Wide_Metric.png width=650></p>
+<p>When calculating the metric for a path, one of the formulas above is used.<br />
+Since the classic metric, especially due to the delay constant, didn’t scale well with higher-speed interfaces, like 10 gbps and 20 gbps, a Wide metric was added, including and extended attribute for jitter, lag or other future parameters.</p>
+<p>As long as the K6 value, isn’t used. The Wide metric are backwards compatible. However, since the Wide metric is scaled by 65.535, instead of 256, which supports interface speeds up to 655 Terabits, it has to be rescaled to be used in a mix setup, the unscaled bandwidth can be found using a separate formula, not listed here.</p>
+<table>
+<thead>
+<tr>
+<th>Media type</th>
+<th>Link Speed (kbps)</th>
+<th>Delay</th>
+<th>Metric</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Serial</td>
+<td>64</td>
+<td>20.000 μs</td>
+<td>40,512,000</td>
+</tr>
+<tr>
+<td>T1</td>
+<td>1544</td>
+<td>20.000 μs</td>
+<td>2.170.031</td>
+</tr>
+<tr>
+<td>Ethernet</td>
+<td>10.000</td>
+<td>1000 μs</td>
+<td>281.600</td>
+</tr>
+<tr>
+<td>FastEthernet</td>
+<td>100.000</td>
+<td>100 μs</td>
+<td>28.160</td>
+</tr>
+<tr>
+<td>GigabitEthernet</td>
+<td>1.000.000</td>
+<td>10 μs</td>
+<td>2816</td>
+</tr>
+<tr>
+<td>10 GigabitEthernet</td>
+<td>10.000.000</td>
+<td>10 μs</td>
+<td>512</td>
+</tr>
+<tr>
+<td>11 GigabitEthernet</td>
+<td>11.000.000</td>
+<td>10 μs</td>
+<td>256</td>
+</tr>
+<tr>
+<td>20 GigabitEthernet</td>
+<td>20.000.000</td>
+<td>10 μs</td>
+<td>256</td>
+</tr>
+</tbody>
+</table>
+<h2 id="router-id">Router ID</h2>
+<p>By default the Router ID is set dynamically, but can also be set manually using the <code>eigrp Router-id &lt;32-bit router ID&gt;</code> command.
+The algorithm for dynamically choosing the <abbr title="Enhanced Interior Gateway Routing Protocol">EIGRP</abbr> <abbr title="Router-ID">RID</abbr> uses the following order:</p>
+<ol>
+<li>Highest IPv4 address of any up loopback interfaces.</li>
+<li>If there are not any up loopback interfaces, the highest IPv4 address of any active up physical interfaces becomes the <abbr title="Router-ID">RID</abbr> when the <abbr title="Enhanced Interior Gateway Routing Protocol">EIGRP</abbr> process initializes.</li>
+</ol>
+<h2 id="configuration">Configuration</h2>
+<h3 id="eigrp_1"><abbr title="Enhanced Interior Gateway Routing Protocol">EIGRP</abbr></h3>
+<pre><code>Router eigrp &lt;AS number&gt;
+eigrp router-id &lt;32-bit Router ID&gt;
+Network &lt;Network adress&gt; [Wildcard mask]
+Passive-interface [&lt;Interface&gt; | Default]
+</code></pre>
+<h3 id="eigrpv6">EIGRPv6</h3>
+<pre><code>ipv6 unicast-routing
+ipv6 router eigrp &lt;AS number&gt;
+eigrp router-id &lt;32-bit Router ID&gt;
+int &lt;interface&gt;
+ipv6 eigrp &lt;AS number&gt;
+</code></pre>
+<h3 id="named-eigrp-ipv4">Named <abbr title="Enhanced Interior Gateway Routing Protocol">EIGRP</abbr> IPv4</h3>
+<pre><code>Router eigrp &lt;Virtual-Instance name&gt;
+address-family ipv4 autonomous-system &lt;AS number&gt;
+eigrp router-id &lt;32-bit Router ID&gt;
+network &lt;network address&gt; &lt;Wildcard mask&gt;
+af-interface [&lt;interface&gt; | default]
+passive-interface !Supress updates
+or
+shutdown !Disable EIGRP address-family on interface
+</code></pre>
+<h3 id="named-eigrp-ipv6">Named <abbr title="Enhanced Interior Gateway Routing Protocol">EIGRP</abbr> IPv6</h3>
+<pre><code>ipv6 unicast-routing
+Router eigrp &lt;Virtual-Instance name&gt;
+address-family ipv6 autonomous-system &lt;AS number&gt;
+eigrp router-id &lt;32-bit Router ID&gt;
+af-interface [&lt;interface&gt; | default]
+passive-interface !Supress updates
+or
+shutdown !Disable EIGRP address-family on interface
+</code></pre>
+<h2 id="additional-configuration">Additional Configuration</h2>
+<h3 id="summarization_1">Summarization</h3>
+<pre><code>int &lt;interface&gt;
+ip summary-address eigrp as-number network subnet-mask [leak-map route-map-name]
+or
+af-interface [&lt;interface&gt; | default]
+summary-address network subnet-mask [leak-map route-map-name]
+</code></pre>
+<h3 id="stub-configuration">Stub Configuration</h3>
+<pre><code>Router eigrp &lt;AS number&gt;
+eigrp stub [connected | receive-only | redistributed | static | summary]
+or
+Router eigrp &lt;Virtual-Instance name&gt;
+address-family [ipv4 | ipv6] autonomous-system &lt;AS number&gt;
+eigrp stub [connected | receive-only | redistributed | static | summary]
+</code></pre>
+<h3 id="altering-the-k-values">Altering the K values</h3>
+<pre><code>int &lt;interface&gt;
+metric weights &lt;TOS&gt; &lt;K1&gt; &lt;K2&gt; &lt;K3&gt; &lt;K4&gt; &lt;K5&gt; [&lt;K6&gt;] !TOS is always “0”
+</code></pre>
+<h3 id="altering-the-delay-value">Altering the delay value</h3>
+<pre><code>int &lt;interface&gt;
+delay &lt;number&gt; !Microseconds
+</code></pre>
+<h3 id="authentication-on-eigrp">Authentication on <abbr title="Enhanced Interior Gateway Routing Protocol">EIGRP</abbr></h3>
+<pre><code>key chain &lt;keychain-name&gt;
+key &lt;number&gt;
+key-string &lt;secret key&gt;
+int &lt;interface&gt;
+ip authentication mode eigrp &lt;as-number&gt; md5
+ip authentication key-chain eigrp &lt;as-number&gt; &lt;keychain-name&gt;
+</code></pre>
+<h3 id="authentication-on-named-eigrp">Authentication on Named <abbr title="Enhanced Interior Gateway Routing Protocol">EIGRP</abbr></h3>
+<pre><code>key chain &lt;keychain-name&gt;
+key &lt;number&gt; !Must be between 0 to 2147483647
+key-string &lt;secret key&gt;
+router eigrp EIGRP-NAMED
+address-family ipv4 unicast autonomouse-system &lt;as-number&gt;
+authentication mode &lt;md5 | hmacsha-256&gt;
+authentication mode &lt;md5 | hmacsha-256&gt;
+authentication key-chain &lt;keychain-name&gt;
+</code></pre>
+<h2 id="redistribution">Redistribution</h2>
+<h3 id="eigrp_2"><abbr title="Enhanced Interior Gateway Routing Protocol">EIGRP</abbr></h3>
+<pre><code>Router eigrp &lt;Virtual-Instance name&gt;
+redistribute &lt;Protocol | ...&gt; [metric [bandwitdh delay reliability effective-bandwitdh MTU]]
+</code></pre>
+<h3 id="eigrpv6_1">EIGRPv6</h3>
+<pre><code>ipv6 unicast-routing
+ipv6 router eigrp &lt;Virtual-Instance name&gt;
+redistribute &lt;Protocol | ...&gt; [metric [bandwitdh delay reliability effective-bandwitdh MTU]]
+</code></pre>
+<h3 id="eigrp-named-configuration"><abbr title="Enhanced Interior Gateway Routing Protocol">EIGRP</abbr> Named configuration</h3>
+<pre><code>Router eigrp &lt;Virtual-Instance name&gt;
+address-family ipv6 autonomous-system &lt;AS number&gt;
+Topology base
+redistribute &lt;Protocol | ...&gt; [metric [bandwitdh delay reliability effective-bandwitdh MTU]]
+</code></pre>
+<h3 id="example">Example</h3>
+<pre><code>redistribute ospf metric 100000 1000 255 1 1500
+</code></pre>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tracking", "navigation.tabs", "navigation.path", "toc.follow", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "content.code.copy", "navigation.instant", "navigation.sections"], "search": "../../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.cd18aaf1.min.js"></script>
+      
+    
+  </body>
+</html>
